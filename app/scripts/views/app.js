@@ -5,6 +5,5 @@ define(['marionette'],function(Marionette){
 			console.log('yesss');
 		}
 	});
-
 	return App;
 });
