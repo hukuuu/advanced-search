@@ -6,6 +6,8 @@
 		"backbone-amd" : null,
 		"underscore-amd" : null,
 		"handlebars" : null,
-		"requirejs" : null
+		"requirejs" : null,
+        "backbone.marionette":null,
+        "backbone.marionette.handlebars":null
 	}
 }
