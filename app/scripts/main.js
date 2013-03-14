@@ -10,12 +10,33 @@ require.config({
 	shim: {
 		'backbone.marionette': {
 			deps: ['underscore', 'backbone']
+		},
+		'handlebars': {
+			exports: 'Handlebars'
 		}
 	}
 });
 
-require(['views/app'], function(AppView) {
+require(['app', 'modules/tracks'], function(app, tracks) {
+	app.addRegions({
+		tracksRegion: "div.tracks-holder"
+	});
+	tracks({
+		app: app,
+		region: app.tracksRegion
+	});
+	app.start();
+	var state = true;
+	$(function() {
+		$('#toggle').on('click', function() {
+			if (state) {
+				app.TracksModule.stop();
+				state = false;
+			} else {
+				app.TracksModule.start();
+				state = true;
+			}
 
-	var appview = new AppView();
-	console.log(appview);
+		});
+	});
 });

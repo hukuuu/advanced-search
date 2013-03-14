@@ -5,6 +5,15 @@
 </head>
 <body>
 	<h1>nice</h1>
+	<div class="tracks-holder"></div>
+	<button id="toggle">toggle</button>
 <script data-main="scripts/main.js" src="scripts/vendor/requirejs/require.js"></script>
+<script id="trackList-template" type="text/html">
+		<h1>tracks</h1>
+		<ul class="tracks-container"></ul>
+</script>
+<script id="track-template" type="text/html">
+	{{from}} {{to}}
+</script>
 </body>
 </html>
