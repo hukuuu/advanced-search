@@ -6,8 +6,8 @@ define(['marionette'], function(Marionette) {
 	});
 
 	var TracksListCompositeView = Backbone.Marionette.CompositeView.extend({
-		tagName:'section',
-		className:'tracks',
+		tagName: 'section',
+		className: 'tracks',
 		template: "#trackList-template",
 		itemView: TrackItemView,
 		itemViewContainer: 'ul.tracks-container'
@@ -28,7 +28,8 @@ define(['marionette'], function(Marionette) {
 
 	return function(options) {
 		var region = options.region,
-			module = options.app.module("TracksModule");
+			app = options.app,
+			module = app.module("TracksModule");
 
 		module.addInitializer(function() {
 			console.log('track module initialize');

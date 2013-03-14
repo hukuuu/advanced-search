@@ -4,12 +4,12 @@ require.config({
 		"underscore": "vendor/underscore-amd/underscore",
 		"backbone": "vendor/backbone-amd/backbone",
 		"handlebars": "vendor/handlebars/handlebars",
-		"backbone.marionette": "vendor/backbone.marionette/lib/backbone.marionette",
-		"marionette": "vendor/backbone.marionette.handlebars/backbone.marionette.handlebars"
+		"marionette": "vendor/backbone.marionette/lib/backbone.marionette"
 	},
 	shim: {
-		'backbone.marionette': {
-			deps: ['underscore', 'backbone']
+		'marionette': {
+			deps: ['underscore', 'backbone'],
+			exports: 'Marionette'
 		},
 		'handlebars': {
 			exports: 'Handlebars'

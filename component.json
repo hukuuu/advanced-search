@@ -8,6 +8,6 @@
 		"handlebars" : null,
 		"requirejs" : null,
         "backbone.marionette":null,
-        "backbone.marionette.handlebars":null
+        "bootstrap.css": null
 	}
 }
