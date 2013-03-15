@@ -1,26 +1,59 @@
 <html>
 <head>
-	<title>nice</title>
-	<link rel="stylesheet" href="scripts/vendor/bootstrap.css/css/bootstrap.css">
-	<link rel="stylesheet" href="styles/app.css">
+    <title>nice</title>
+    <link rel="stylesheet" href="scripts/vendor/bootstrap.css/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 </head>
 <body>
-	<h1>nice</h1>
-	<button id="toggle">toggle</button>
-	<div class="tracks-holder"></div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3"></div>
+
+        <div class="span6">
+
+            <form class="form-inline">
+                <fieldset>
+                    <legend>Search</legend>
+                    <input type="text" placeholder="from" class="from">
+                    <input type="text" placeholder="to" class="to">
+                    <button type="button" class="btn submit-search btn-primary">search</button>
+                </fieldset>
+            </form>
+
+            <div class="map-canvas"></div>
+
+            <div class="tracks-holder"></div>
+
+        </div>
+
+        <div class="span3"></div>
+    </div>
+</div>
+
+
 <script data-main="scripts/main.js" src="scripts/vendor/requirejs/require.js"></script>
+
+<!--templates-->
+
 <script id="trackList-template" type="text/html">
-		<h1>tracks</h1>
-		<ul class="tracks-container unstyled"></ul>
+    <h1>tracks</h1>
+    <ul class="tracks-container unstyled"></ul>
 </script>
 <script id="track-template" type="text/html">
-	<div class="well">
-		<p>from:{{from}} to:{{to}}</p>
-		<p>{{name}}</p>
-		<p>{{phone}}</p>
-		<p>{{email}}</p>
-		<p>{{when}}</p>
-	</div>
+    <div class="well">
+        <p>from:{{from}} to:{{to}}</p>
+
+        <p>{{name}}</p>
+
+        <p>{{phone}}</p>
+
+        <p>{{email}}</p>
+
+        <p>{{when}}</p>
+    </div>
 </script>
+
+
 </body>
 </html>

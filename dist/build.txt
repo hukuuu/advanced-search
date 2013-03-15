@@ -33,5 +33,5 @@ scripts/main.js
 scripts/vendor/underscore-amd/underscore.js
 scripts/vendor/jquery/jquery.js
 scripts/vendor/backbone-amd/backbone.js
-scripts/views/app.js
+scripts/views/advancedSearch.js
 scripts/main.js

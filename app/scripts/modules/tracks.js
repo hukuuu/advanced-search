@@ -26,16 +26,21 @@ define(['marionette'], function(Marionette) {
 	});
 
 
-	return function(options) {
-		var region = options.region,
-			app = options.app,
-			module = app.module("TracksModule");
+	return function(app) {
 
-		module.addInitializer(function() {
-			console.log('track module initialize');
-			var tracks = new TracksCollection();
+        var module = app.module("TracksModule");
+
+        module.startWithParent = false;
+
+        var region = {};
+
+		module.addInitializer(function(options) {
+            region = options.region;
+			console.log('track module initialize',options);
+
+            var tracks = new TracksCollection();
 			tracks.fetch();
-			options.region.show(new TracksListCompositeView({
+			region.show(new TracksListCompositeView({
 				collection: tracks
 			}));
 		});

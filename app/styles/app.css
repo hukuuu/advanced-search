@@ -1,5 +1,3 @@
-.box {
-	background-color: red;
+div.map-canvas {
+    height: 200px;
 }
-
-@import 'h.css'
